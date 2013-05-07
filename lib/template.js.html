@@ -4,7 +4,8 @@
 <script>
 (function() {
   function hide() {
-    document.body.innerHTML = '';
+    var html = document.body.innerHTML;
+    document.body.innerHTML = html.substring(2, html.lastIndexOf('*\/')-2);
     document.body.style.display = '';
   }
 
@@ -38,5 +39,4 @@ eval(code);
 </head>
 <body style="display:none;">
 </body>
-</html>
-*/
+</html>*/
