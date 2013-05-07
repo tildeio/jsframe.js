@@ -1,0 +1,38 @@
+{
+  "name": "jsframe.js",
+  "preferGlobal": true,
+  "version": "0.1.0",
+  "author": "Lessmad LLC",
+  "description": "jsframe.js converts javascript files into javascript/html polyglot.",
+  "contributors": [
+    {
+      "name": "David J. Hamilton",
+      "email": "david@lessmad.com"
+    }
+  ],
+  "bin": {
+    "jsframe.js": "bin/jsframe.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "lib/jsframe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LessMad/jsframe.js.git"
+  },
+  "keywords": [],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "es6-module-transpiler": "~0.1.0",
+    "grunt-contrib-concat": "~0.1.3",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-connect": "~0.1.2",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-contrib-jshint": "~0.4.3",
+    "gfms": "0.0.7"
+  },
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}

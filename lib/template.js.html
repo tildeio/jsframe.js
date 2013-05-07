@@ -1,0 +1,42 @@
+/*<!DOCTYPE html>
+<html>
+<head>
+<script>
+(function() {
+  function hide() {
+    document.body.innerHTML = '';
+    document.body.style.display = '';
+  }
+
+  if (window.addEventListener) {
+    window.addEventListener('load', hide);
+  } else if (window.attachEvent) {
+    window.attachEvent('onload', hide);
+  }
+})();
+</script>
+<script type="text/x-javascript" id="jsfr_payload">
+// */
+
+{{CODE}}
+
+/*
+</script>
+<script id="jsfr_executor">
+var codeEl = document.getElementById('jsfr_payload'),
+    codePlus = codeEl.innerText,
+    code = codePlus.substring(0, codePlus.length-3),
+    elIds = ['jsfr_payload', 'jsfr_executor'],
+    el;
+
+for (var i=0; i<elIds.length; ++i) {
+  el = document.getElementById(elIds[i]);
+  el.parentNode.removeChild(el);
+}
+eval(code);
+</script>
+</head>
+<body style="display:none;">
+</body>
+</html>
+*/
