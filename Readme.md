@@ -37,8 +37,11 @@ outFd.close();
 
 ```js
 // my_javascript.js
-top.n = top.n || 1;
-document.body.appendChild(document.createTextNode("loaded " + top.n + " times"));
+if (this === top) {
+  console.log("Loaded in a script tag");
+} else {
+  console.log("Loaded in a frame");
+}
 ```
 
 ```sh
