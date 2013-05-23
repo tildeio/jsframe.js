@@ -1,0 +1,1 @@
+top.postMessage(document.documentMode+'', '*');

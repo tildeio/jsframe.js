@@ -23,8 +23,16 @@
   },
   "keywords": [],
   "dependencies": {
+    "globule": "~0.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.3",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-connect": "~0.3.0"
+  },
   "license": "BSD",
   "readmeFilename": "README.md"
 }
