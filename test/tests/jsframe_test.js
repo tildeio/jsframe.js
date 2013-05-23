@@ -1,5 +1,37 @@
 QUnit.config.testTimeout = 2000 * 100;
 
+test("polyglotted js can be loaded as JavaScript", function() {
+  stop();
+
+  function checkPolyLoaded(event) {
+    start();
+    event = event || window.event;
+
+    equal(event.data, "poly_simple loaded", "user script can run as JavaScript");
+  }
+
+  window.onmessage = checkPolyLoaded;
+
+  var $script = $('<script src="/tmp/poly_simple.js.html"></script>');
+  $script.appendTo('#qunit-fixture');
+});
+
+test("polyglotted js can be loaded as HTML", function() {
+  stop();
+
+  function checkPolyLoaded(event) {
+    start();
+    event = event || window.event;
+
+    equal(event.data, "poly_simple loaded", "user script can run as JavaScript");
+  }
+
+  window.onmessage = checkPolyLoaded;
+
+  var $iframe = $('<iframe src="/tmp/poly_simple.js.html"></iframe>');
+  $iframe.appendTo('#qunit-fixture');
+});
+
 test("iframes can be loaded from a polyglotted js", function() {
   stop();
 

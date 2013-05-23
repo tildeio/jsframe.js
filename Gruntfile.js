@@ -29,7 +29,7 @@ module.exports = function(grunt) {
       var files = Globule.find(pattern);
       files.forEach( function(filePath) {
         var basename = Path.basename(filePath),
-            targetName = Path.join(dest, basename) + '.html';
+            targetName = Path.join(dest, basename) + '.html',
             outFd = File.openSync(targetName, 'w');
 
         console.log(filePath + " → " + targetName);
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
 
       tests: {
         src: ['test/tests/*'],
-        dest: 'tmp/<%= pkg.name %>-<%= pkg.version %>-tests.js'
+        dest: 'tmp/<%= pkg.name %>-<%= pkg.version %>-test.js'
       },
 
       dist: {
