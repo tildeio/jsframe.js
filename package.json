@@ -5,10 +5,7 @@
   "author": "Lessmad LLC",
   "description": "jsframe.js converts javascript files into javascript/html polyglot.",
   "contributors": [
-    {
-      "name": "David J. Hamilton",
-      "email": "david@lessmad.com"
-    }
+    "David J. Hamilton <david@lessmad.com>"
   ],
   "bin": {
     "jsframe.js": "bin/jsframe.js"
@@ -34,5 +31,9 @@
     "grunt-contrib-connect": "~0.3.0"
   },
   "license": "BSD",
-  "readmeFilename": "README.md"
+  "readmeFilename": "Readme.md",
+  "gitHead": "44fd54691d696e97b2a28f265a5ef29db546c595",
+  "directories": {
+    "test": "test"
+  }
 }
