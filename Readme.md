@@ -20,7 +20,7 @@ element or an `iframe` element.
 
 ####  From the Command Line
 
-`jsframe.js my_javascript.js > my_polyglot.js.html`
+`jsframe my_javascript.js > my_polyglot.js.html`
 
 ####  Programmatic
 
@@ -41,8 +41,9 @@ top.n = top.n || 1;
 document.body.appendChild(document.createTextNode("loaded " + top.n + " times"));
 ```
 
-```bash
-jsframe.js my_javascript.js > my_javascript.js.html
+```sh
+# shell
+jsframe my_javascript.js > my_javascript.js.html
 ```
 
 ```html

@@ -3,18 +3,8 @@ module.exports = function(grunt) {
       File = require('fs'),
       Path = require('path');
 
-  // By default, (i.e., if you invoke `grunt` without arguments), do
-  // a new build.
-  this.registerTask('default', ['build']);
-
-  // Build a new version of the library
-  this.registerTask('build', "Builds a distributable version of jsframe.js", ['clean', 'jshint', 'concat:dist']);
-
-  // Build a dev version of the library
-  this.registerTask('build-dev', "Builds a development version of jsframe.js", ['clean', 'concat:dist']);
-
-  // Run a server. This is ideal for running the QUnit tests in the browser.
-  this.registerTask('server', ['concat', 'jsframe', 'build-dev', 'connect', 'watch']);
+  this.registerTask('default', ['server']);
+  this.registerTask('server', ['concat', 'jsframe', 'connect', 'watch']);
 
   this.registerMultiTask('jsframe', 'build polyglot files', function () {
     var jsfPath = require.resolve('./lib/jsframe'),
@@ -54,7 +44,7 @@ module.exports = function(grunt) {
 
     watch: {
       files: ['lib/**', 'vendor/*', 'test/tests/*', 'test/fixtures-poly/*'],
-      tasks: ['build-dev', 'concat:tests', 'jsframe']
+      tasks: ['concat:tests', 'jsframe']
     },
 
     clean: ["dist"],
@@ -75,11 +65,6 @@ module.exports = function(grunt) {
       tests: {
         src: ['test/tests/*'],
         dest: 'tmp/<%= pkg.name %>-<%= pkg.version %>-test.js'
-      },
-
-      dist: {
-        src: ['lib/*.js'],
-        dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.js'
       }
     },
 

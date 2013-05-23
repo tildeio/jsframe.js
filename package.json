@@ -1,39 +1,31 @@
 {
-  "name": "jsframe.js",
-  "preferGlobal": true,
+  "name": "jsframe",
   "version": "0.1.0",
-  "author": "Lessmad LLC",
-  "description": "jsframe.js converts javascript files into javascript/html polyglot.",
-  "contributors": [
-    "David J. Hamilton <david@lessmad.com>"
-  ],
+  "description": "JavaScript -> JavaScript/HTML polyglot compiler.",
+  "main": "./lib/jsframe",
   "bin": {
-    "jsframe.js": "bin/jsframe.js"
+    "jsframe": "./bin/jsframe"
   },
+  "dependencies": {
+    "globule": "~0.1.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-watch": "~0.4.3",
+    "package.json": "~0.0.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"not implemented\""
   },
-  "main": "lib/jsframe",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LessMad/jsframe.js.git"
+    "url": "git://github.com/tildeio/jsframe.js.git"
   },
-  "keywords": [],
-  "dependencies": {
-    "globule": "~0.1.0"
-  },
-  "devDependencies": {
-    "grunt-contrib-clean": "~0.4.1",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-watch": "~0.4.3",
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.4.3",
-    "grunt-contrib-connect": "~0.3.0"
-  },
+  "author": "David J. Hamilton <david@lessmad.com>",
   "license": "BSD",
   "readmeFilename": "Readme.md",
-  "gitHead": "44fd54691d696e97b2a28f265a5ef29db546c595",
-  "directories": {
-    "test": "test"
-  }
+  "gitHead": "02944b498b0cdb47624cfa673fde5b849f0c920c"
 }
