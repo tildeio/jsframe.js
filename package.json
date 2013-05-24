@@ -7,6 +7,8 @@
     "jsframe": "./bin/jsframe"
   },
   "dependencies": {
+  },
+  "devDependencies": {
     "globule": "~0.1.0",
     "grunt": "~0.4.1",
     "grunt-contrib-concat": "~0.3.0",
@@ -15,7 +17,6 @@
     "grunt-contrib-jshint": "~0.4.3",
     "grunt-contrib-watch": "~0.4.3"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"not implemented\""
   },
