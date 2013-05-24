@@ -1,13 +1,12 @@
 {
   "name": "jsframe",
-  "version": "0.1.0",
+  "version": "0.1.0-1",
   "description": "JavaScript -> JavaScript/HTML polyglot compiler.",
   "main": "./lib/jsframe",
   "bin": {
     "jsframe": "./bin/jsframe"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "globule": "~0.1.0",
     "grunt": "~0.4.1",
