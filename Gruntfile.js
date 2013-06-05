@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 
       tests: {
         src: ['test/tests/*'],
-        dest: 'tmp/<%= pkg.name %>-<%= pkg.version %>-test.js'
+        dest: 'tmp/<%= pkg.name %>-tests.js'
       }
     },
 

@@ -1,6 +1,6 @@
 {
   "name": "jsframe",
-  "version": "0.1.0-1",
+  "version": "0.1.0-2",
   "description": "JavaScript -> JavaScript/HTML polyglot compiler.",
   "main": "./lib/jsframe",
   "bin": {

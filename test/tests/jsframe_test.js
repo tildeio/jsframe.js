@@ -1,4 +1,5 @@
-QUnit.config.testTimeout = 2000 * 100;
+QUnit.config.testTimeout = 300;
+QUnit.config.testTimeout = 300 * 100;
 
 test("polyglotted js can be loaded as JavaScript", function() {
   stop();
@@ -65,5 +66,21 @@ if (document.documentMode) {
 
     var $iframe = $('<iframe src="/test/fixtures/container_doctype.html"></iframe>');
     $iframe.appendTo('#qunit-fixture');
+  });
+}
+
+if (typeof Worker !== 'undefined') {
+  test("polyglot files can be used as webworker URLs", function() {
+    stop();
+
+    function checkPolyLoaded(event) {
+      start();
+      event = event || window.event;
+
+      equal(event.data, "poly_simple loaded", "user script can run as JavaScript");
+    }
+
+    var worker = new Worker('/tmp/poly_simple_worker.js.html');
+    worker.onmessage = checkPolyLoaded;
   });
 }
