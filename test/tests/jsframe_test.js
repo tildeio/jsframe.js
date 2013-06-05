@@ -49,7 +49,6 @@ test("iframes can be loaded from a polyglotted js", function() {
   $iframe.appendTo('#qunit-fixture');
 });
 
-
 if (document.documentMode) {
   test("iframes loaded in ie via polyglot are not in quirks mode", function() {
     stop();
@@ -84,3 +83,10 @@ if (typeof Worker !== 'undefined') {
     worker.onmessage = checkPolyLoaded;
   });
 }
+
+
+// more involved library tests
+test("kamino.js can be loaded", function() {
+  var $script = $('<script src="/tmp/kamino.js.html"></script>');
+  $script.appendTo('#qunit-fixture');
+});
