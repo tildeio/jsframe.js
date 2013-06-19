@@ -27,7 +27,7 @@ element or an `iframe` element.
 ```js
 var fs = require('fs'),
     jsf = require('jsframe'),
-    outFd = File.openSync('my_polyglot.js.html', 'w');
+    outFd = fs.openSync('my_polyglot.js.html', 'w');
 
 jsf.process('my_javascript.js', outFd);
 outFd.close();
